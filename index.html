@@ -47,9 +47,13 @@
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s ease;
+      cursor: pointer;
+      user-select: none;
     }
-    .btn:hover {
+    .btn:hover,
+    .btn:focus {
       background: #ff85c1;
+      outline: none;
     }
     .qr img {
       width: 140px;
@@ -67,9 +71,13 @@
       border: 1px solid #fff;
       border-radius: 4px;
       cursor: pointer;
+      user-select: none;
+      transition: background 0.3s ease;
     }
-    .token-address button:hover {
+    .token-address button:hover,
+    .token-address button:focus {
       background: #444;
+      outline: none;
     }
     .links {
       margin-top: 2rem;
@@ -79,6 +87,11 @@
       color: #00ffff;
       text-decoration: none;
       font-weight: bold;
+    }
+    .links a:hover,
+    .links a:focus {
+      text-decoration: underline;
+      outline: none;
     }
     #boop-price {
       font-size: 1.2rem;
@@ -99,41 +112,40 @@
   
   <h1>$BOOP — The Meme Token</h1>
   
-  <p>Born from a popped bubble in the Boopverse. Powered by chaos, memes, and good vibes. Not financial advice — just pure boop energy.</p>
-
+  <p>Welcome to Boopi, the vibrant meme token powering the chaotic good vibes of the Boopverse. Join the fun, spread the memes, and embrace the boop energy.</p>
+  
   <p><strong>Token:</strong> Boopi ($BOOP)<br>
      <strong>Supply:</strong> 10B<br>
-     <strong>Decimals:</strong> 9<br>
      <strong>Chain:</strong> Solana
   </p>
 
   <h2>Live Price &amp; Chart</h2>
 
-  <a id="boop-price" href="https://www.geckoterminal.com/solana/pools/3VrEpFG3FwiCUHzkPQjLPqZpgVe1kHNxSb6jBYjQrhni" target="_blank" rel="noopener noreferrer">
+  <a id="boop-price" href="https://www.geckoterminal.com/solana/pools/3VrEpFG3FwiCUHzkPQjLPqZpgVe1kHNxSb6jBYjQrhni" target="_blank" rel="noopener noreferrer" aria-label="View Boopi price and chart on GeckoTerminal">
     Loading $BOOP price...
   </a>
 
   <p>💫 Viral. 💥 Meme-powered. 🧠 No roadmap. Just vibes.</p>
   
-  <a class="btn" href="https://jup.ag/swap/SOL-7HVKuoYdwsUSX1Ge9moHNJ6nGpmBCsd9p6mtzGAw4Z59" target="_blank" rel="noopener noreferrer">Buy on Jupiter</a>
-  <a class="btn" href="https://raydium.io/swap/?input=So11111111111111111111111111111111111111112&output=7HVKuoYdwsUSX1Ge9moHNJ6nGpmBCsd9p6mtzGAw4Z59&fixed=in" target="_blank" rel="noopener noreferrer">Buy on Raydium</a>
-  <a class="btn" href="https://www.geckoterminal.com/solana/pools/3VrEpFG3FwiCUHzkPQjLPqZpgVe1kHNxSb6jBYjQrhni" target="_blank" rel="noopener noreferrer">View Pool on GeckoTerminal</a>
+  <a class="btn" href="https://jup.ag/swap/SOL-7HVKuoYdwsUSX1Ge9moHNJ6nGpmBCsd9p6mtzGAw4Z59" target="_blank" rel="noopener noreferrer" aria-label="Buy Boopi on Jupiter">Buy on Jupiter</a>
+  <a class="btn" href="https://raydium.io/swap/?input=So11111111111111111111111111111111111111112&output=7HVKuoYdwsUSX1Ge9moHNJ6nGpmBCsd9p6mtzGAw4Z59&fixed=in" target="_blank" rel="noopener noreferrer" aria-label="Buy Boopi on Raydium">Buy on Raydium</a>
+  <a class="btn" href="https://www.geckoterminal.com/solana/pools/3VrEpFG3FwiCUHzkPQjLPqZpgVe1kHNxSb6jBYjQrhni" target="_blank" rel="noopener noreferrer" aria-label="View Boopi pool on GeckoTerminal">View Pool on GeckoTerminal</a>
 
   <div class="qr">
     <p>Scan to buy:</p>
-    <img src="boop_qr.png" alt="Buy $BOOP QR" />
+    <img src="boop_qr.png" alt="Buy $BOOP QR code" />
   </div>
 
-  <div class="token-address">
+  <div class="token-address" role="region" aria-label="Token address">
     Token Address:
     <span id="tokenAddr">7HVKuoYdwsUSX1Ge9moHNJ6nGpmBCsd9p6mtzGAw4Z59</span>
-    <button onclick="copyToken()">📋 Copy</button>
+    <button onclick="copyToken()" aria-label="Copy token address to clipboard">📋 Copy</button>
   </div>
 
   <div class="links">
-    <a href="https://x.com/MEMEBLOOP" target="_blank" rel="noopener noreferrer">Twitter</a>
-    <a href="https://github.com/moshiko518/BOOPI" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://foxqt44yvejkzr344huiql5dyk5aashzfruawad43dptltlqwgsq.arweave.net/K68J85ipEqzHfOHoiC-jwroASPksaAsAfNjfNc1wsaU" target="_blank" rel="noopener noreferrer">Token JSON</a>
+    <a href="https://x.com/MEMEBLOOP" target="_blank" rel="noopener noreferrer" aria-label="Boopi Twitter">Twitter</a>
+    <a href="https://github.com/moshiko518/BOOPI" target="_blank" rel="noopener noreferrer" aria-label="Boopi GitHub repository">GitHub</a>
+    <a href="https://foxqt44yvejkzr344huiql5dyk5aashzfruawad43dptltlqwgsq.arweave.net/K68J85ipEqzHfOHoiC-jwroASPksaAsAfNjfNc1wsaU" target="_blank" rel="noopener noreferrer" aria-label="Boopi token JSON metadata">Token JSON</a>
   </div>
 
   <footer>
@@ -142,8 +154,11 @@
 
   <script>
     function copyToken() {
-      navigator.clipboard.writeText("7HVKuoYdwsUSX1Ge9moHNJ6nGpmBCsd9p6mtzGAw4Z59");
-      alert("Token address copied!");
+      navigator.clipboard.writeText("7HVKuoYdwsUSX1Ge9moHNJ6nGpmBCsd9p6mtzGAw4Z59").then(() => {
+        alert("Token address copied!");
+      }).catch(() => {
+        alert("Failed to copy token address.");
+      });
     }
 
     async function fetchBoopPrice() {
@@ -151,9 +166,13 @@
         const response = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=boop-4&vs_currencies=usd");
         if (!response.ok) throw new Error("Network response not OK");
         const data = await response.json();
-        const price = data["boop-4"].usd;
+        const price = data["boop-4"]?.usd;
         const priceEl = document.getElementById("boop-price");
-        priceEl.innerText = `💰 $BOOP Price: $${price}`;
+        if (price !== undefined) {
+          priceEl.innerText = `💰 $BOOP Price: $${price}`;
+        } else {
+          priceEl.innerText = "⚠️ Price data not available.";
+        }
       } catch (error) {
         console.error("Error fetching price:", error);
         document.getElementById("boop-price").innerText = "⚠️ Unable to fetch price data.";
