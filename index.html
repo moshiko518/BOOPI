@@ -26,6 +26,11 @@
     h1 {
       font-size: 2rem;
     }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      color: #ff69b4;
+    }
     p {
       font-size: 1rem;
       line-height: 1.5;
@@ -109,6 +114,9 @@
      <strong>Decimals:</strong> 9<br>
      <strong>Chain:</strong> Solana
   </p>
+
+  <!-- New header for live price and chart -->
+  <h2>Live Price &amp; Chart</h2>
 
   <!-- 💰 Live Price -->
   <div id="boop-price">Loading $BOOP price...</div>
@@ -256,7 +264,12 @@
     }
 
     fetchPriceHistory();
-    setInterval(fetchPriceHistory, 120000); // refresh every 2 minutes
+
+    // Refresh current price every 60 seconds
+    setInterval(fetchBoopPrice, 60000);
+
+    // Refresh chart every 5 minutes
+    setInterval(fetchPriceHistory, 300000);
   </script>
 </body>
 </html>
